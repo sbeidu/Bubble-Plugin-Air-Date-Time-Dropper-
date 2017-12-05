@@ -1,0 +1,129 @@
+{
+    "add_hover_pressed": true,
+    "add_is_visible": true,
+    "category": "input forms",
+    "default_dim": {
+        "height": 40,
+        "width": 120
+    },
+    "display": "Air TimeDropper",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1498005846210x484627859201282240/bubbleplaceholder.png",
+    "fields": {
+        "AAQ": {
+            "caption": "Time format",
+            "default_val": "3:09 pm",
+            "doc": "A time format string to be used to display in the timeDropper",
+            "editor": "Dropdown",
+            "name": "format",
+            "options": "3:09 pm,3:09 PM,15:09, 3:9 pm, 3:9 PM, 03:09 AM",
+            "rank": 0
+        },
+        "AAR": {
+            "caption": "Auto-switch between hour and minute selectors",
+            "default_val": false,
+            "doc": "Will automatically switch between hour and minute handles",
+            "editor": "Checkbox",
+            "name": "autoswitch",
+            "rank": 1
+        },
+        "AAS": {
+            "caption": "Use 24hr clock",
+            "default_val": false,
+            "doc": "If checked will use 24hr clock",
+            "editor": "Checkbox",
+            "name": "meridians",
+            "rank": 2
+        },
+        "AAT": {
+            "caption": "Enables time change using mousewheel",
+            "default_val": false,
+            "doc": "Enables time change using mousewheel",
+            "editor": "Checkbox",
+            "name": "mousewheel",
+            "rank": 3
+        },
+        "AAU": {
+            "caption": "Set current time",
+            "default_val": true,
+            "doc": "Automatically set current time by default.",
+            "editor": "Checkbox",
+            "name": "setcurrenttime",
+            "rank": 4
+        },
+        "AAV": {
+            "caption": "Initial animation",
+            "default_val": "fadein",
+            "doc": "Animation Style to use when showing timedropper.",
+            "editor": "Dropdown",
+            "name": "init_animation",
+            "options": "fadein,fadeout,dropdown",
+            "rank": 5
+        },
+        "AAW": {
+            "caption": "Accent color",
+            "default_val": "rgba(25, 119, 204, 1)",
+            "doc": "Specify a color value for drop down accent color. Default: #1977CC",
+            "editor": "Color",
+            "name": "primarycolor",
+            "optional": true,
+            "rank": 6
+        },
+        "AAX": {
+            "caption": "Border color",
+            "default_val": "rgba(25, 119, 204, 1)",
+            "doc": "Specify a color value for drop down border color. Default: #1977CC",
+            "editor": "Color",
+            "name": "bordercolor",
+            "optional": true,
+            "rank": 7
+        },
+        "AAY": {
+            "caption": "Background color",
+            "default_val": "rgba(255, 255, 255, 1)",
+            "doc": "Specify a color value for drop down background color. Default: #FFFFFF",
+            "editor": "Color",
+            "name": "backgroundcolor",
+            "optional": true,
+            "rank": 8
+        },
+        "AAZ": {
+            "caption": "Text color",
+            "default_val": "rgba(85, 85, 85, 1)",
+            "doc": "Specify a color value for drop down text color. Default: #555",
+            "editor": "Color",
+            "name": "textcolor",
+            "optional": true,
+            "rank": 9
+        }
+    },
+    "icon": "ion-waterdrop",
+    "property_applications": {
+        "Background": true,
+        "Border": true,
+        "BoxShadow": true,
+        "Font": true,
+        "MinWidth": true,
+        "Padding": true,
+        "resizable": true
+    },
+    "states": {
+        "AAc": {
+            "caption": "value",
+            "doc": "Current selected time as text",
+            "name": "value",
+            "value": "text"
+        },
+        "AAu": {
+            "caption": "minutes",
+            "doc": "Current selected minutes as number",
+            "name": "minutes",
+            "value": "number"
+        },
+        "AAv": {
+            "caption": "hours",
+            "doc": "Current selected hours as number",
+            "name": "hours",
+            "value": "number"
+        }
+    }
+}

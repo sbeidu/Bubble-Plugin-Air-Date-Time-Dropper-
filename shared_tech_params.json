@@ -1,0 +1,47 @@
+{
+    "assets": {
+        "AAD": {
+            "name": "src/datedropper.svg",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497902572175x461873550899326800/datedropper.svg"
+        },
+        "AAE": {
+            "name": "src/datedropper.eot",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497902683254x583711758721619800/datedropper.eot"
+        },
+        "AAF": {
+            "name": "src/datedropper.ttf",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497902736718x338755810400471100/datedropper.ttf"
+        },
+        "AAG": {
+            "name": "src/datedropper.woff",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497902752957x534833882702514560/datedropper.woff"
+        },
+        "AAK": {
+            "name": "datedropper.css",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497904845602x774688579142093700/datedropper.css"
+        },
+        "AAM": {
+            "name": "theme.css",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497912148369x682439032243564700/theme.css"
+        },
+        "AAO": {
+            "name": "timedropper.min.css",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497919056159x983207752229645800/timedropper.min.css"
+        },
+        "AAP": {
+            "name": "timedropper.min.js",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1497919138906x698265989311039500/timedropper.min.js"
+        },
+        "AAt": {
+            "name": "themes",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1498006235325x718382122693583400/theme.css"
+        },
+        "AAy": {
+            "name": "datedropper.min.js",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1512496500813x645340363029390600/datedropper.min.js"
+        }
+    },
+    "dependencies": {
+        "use_jquery": true
+    }
+}

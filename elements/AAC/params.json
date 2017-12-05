@@ -1,0 +1,160 @@
+{
+    "add_hover_pressed": true,
+    "add_is_visible": true,
+    "category": "input forms",
+    "default_dim": {
+        "height": 40,
+        "width": 150
+    },
+    "display": "Air DateDropper",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1498005823897x511515414342284200/bubbleplaceholder.png",
+    "fields": {
+        "AAL": {
+            "caption": "Theme",
+            "default_val": "bluewhite",
+            "doc": "Select a theme to apply to the date picker.",
+            "editor": "Dropdown",
+            "name": "theme",
+            "options": "bluewhite,red,lightgreen,crimson,gold,deepsky",
+            "rank": 0
+        },
+        "AAe": {
+            "caption": "Initial date",
+            "doc": "This option offers the possibility to set a starting date. Please note that you must follow this specific format (mm-dd-yyyy) to allow the matching to recognize month, day and year.",
+            "editor": "DynamicValue",
+            "name": "default_date",
+            "optional": true,
+            "rank": 1,
+            "value": "date"
+        },
+        "AAf": {
+            "caption": "Disabled dates",
+            "doc": "This option offers the possibility to set a string of disabled days. So, separate all days by comma and the picker will convert them into an array. Please note that you must follow this specific format (mm/dd/yyyy) to allow the matching to recognize month, day and year.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "disabled_dates",
+            "optional": true,
+            "rank": 2,
+            "value": "date"
+        },
+        "AAg": {
+            "caption": "Date format",
+            "default_val": "22/06/1983",
+            "doc": "The date format the picker will write on the selected input.",
+            "editor": "Dropdown",
+            "name": "format",
+            "optional": false,
+            "options": "22/06/1983,06/22/1983,22-06-1983,06-22-1983,22 June 1983,22 Jun 1983,Wed 22 June 1983,Jun (month only),1983 (year only)",
+            "rank": 3
+        },
+        "AAh": {
+            "caption": "Animation ",
+            "default_val": true,
+            "doc": "If set to true, the picker will run an initial state animation and all user changes are animated.",
+            "editor": "Checkbox",
+            "name": "fx",
+            "rank": 4
+        },
+        "AAi": {
+            "caption": "Disable animation on mobile",
+            "default_val": true,
+            "doc": "Animations could be very slow on some older smartphones. To prevent this, set this option to false to disable animations on any mobile viewport.",
+            "editor": "Checkbox",
+            "name": "fx_mobile",
+            "rank": 5
+        },
+        "AAj": {
+            "caption": "Change input automatically",
+            "default_val": true,
+            "doc": "This option changes the input value automatically, by default. Set to false to prevent it.",
+            "editor": "Checkbox",
+            "name": "init_set",
+            "rank": 6
+        },
+        "AAk": {
+            "caption": "Language for month and day names",
+            "default_val": "English",
+            "doc": "Display Language to use for Month name and Day-of-week.",
+            "editor": "Dropdown",
+            "name": "lang",
+            "options": "Arabic,Italian,Hungarian,Greek,English,Espanol,Dansk,Deutch,Dutch,Francais,Polski,Portuguese,Slovenian,Ukrainian,Russian,Turkish,Korean",
+            "rank": 7
+        },
+        "AAl": {
+            "caption": "Show large mode on click of day.",
+            "default_val": true,
+            "doc": "This option enables to switch the size of the picker by clicking on the icon at the bottom or clicking on the day block.",
+            "editor": "Checkbox",
+            "name": "large_mode",
+            "rank": 8
+        },
+        "AAm": {
+            "caption": "Show large view by default",
+            "default_val": false,
+            "doc": "If is checked, this option shows the large view by default.",
+            "editor": "Checkbox",
+            "name": "large_default",
+            "rank": 9
+        },
+        "AAn": {
+            "caption": "Prevent dates to/from current date",
+            "default_val": "false",
+            "doc": "This option sets the date limit based on the assigned variable. If you set to \"from\", you can't select a date earlier than the current date. Opposed to this behavior, if it's set to \"to\", you can not select a date after the current date.",
+            "editor": "Dropdown",
+            "name": "lock",
+            "optional": false,
+            "options": "false,to,from",
+            "rank": 10
+        },
+        "AAo": {
+            "caption": "Minimum year",
+            "doc": "The lowest year that the control will allow.",
+            "editor": "StaticText",
+            "name": "min_year",
+            "optional": true,
+            "rank": 11
+        },
+        "AAp": {
+            "caption": "Maximum year",
+            "doc": "The highest year that the control will allow.",
+            "editor": "StaticText",
+            "name": "max_year",
+            "optional": true,
+            "rank": 12
+        },
+        "AAr": {
+            "caption": "Enable translate mode",
+            "default_val": true,
+            "doc": "If it's set to true, you can change the language by clicking on the icon at the bottom.",
+            "editor": "Checkbox",
+            "name": "translate_mode",
+            "rank": 14
+        },
+        "AAs": {
+            "caption": "Modal",
+            "default_val": false,
+            "doc": "If this option is set to true, the picker will be displayed centered, with a dark overlay in background.",
+            "editor": "Checkbox",
+            "name": "modal",
+            "rank": 13
+        }
+    },
+    "icon": "ion-calendar",
+    "property_applications": {
+        "Background": true,
+        "Border": true,
+        "BoxShadow": true,
+        "Font": true,
+        "MinWidth": true,
+        "Padding": true,
+        "resizable": true
+    },
+    "states": {
+        "AAb": {
+            "caption": "value",
+            "doc": "Returns the currently selected date by the picker",
+            "name": "value",
+            "value": "date"
+        }
+    }
+}
