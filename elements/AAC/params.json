@@ -143,8 +143,10 @@
         "ABC": {
             "caption": "Placeholder",
             "default_val": "Placeholder text ...",
+            "doc": "Placeholder text",
             "editor": "StaticText",
             "name": "placeholder",
+            "optional": true,
             "rank": 1
         },
         "ABM": {
