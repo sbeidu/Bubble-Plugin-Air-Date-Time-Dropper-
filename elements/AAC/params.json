@@ -1,6 +1,8 @@
 {
     "add_hover_pressed": true,
     "add_is_visible": true,
+    "autobinding_is_list": false,
+    "autobinding_value": "date",
     "category": "input forms",
     "default_dim": {
         "height": 40,
@@ -24,7 +26,7 @@
             "editor": "DynamicValue",
             "name": "default_date",
             "optional": true,
-            "rank": 1,
+            "rank": 4,
             "value": "date"
         },
         "AAf": {
@@ -34,7 +36,7 @@
             "is_list": true,
             "name": "disabled_dates",
             "optional": true,
-            "rank": 2,
+            "rank": 5,
             "value": "date"
         },
         "AAg": {
@@ -44,8 +46,8 @@
             "editor": "Dropdown",
             "name": "format",
             "optional": false,
-            "options": "22/06/1983,06/22/1983,22-06-1983,06-22-1983,22 June 1983,22 Jun 1983,Wed 22 June 1983,Jun (month only),1983 (year only)",
-            "rank": 3
+            "options": "22/06/1983,06/22/1983,22-06-1983,06-22-1983,22 June 1983,22 Jun 1983,Wednesday 22 June 1983,Jun (month only),1983 (year only)",
+            "rank": 6
         },
         "AAh": {
             "caption": "Animation ",
@@ -53,7 +55,7 @@
             "doc": "If set to true, the picker will run an initial state animation and all user changes are animated.",
             "editor": "Checkbox",
             "name": "fx",
-            "rank": 4
+            "rank": 7
         },
         "AAi": {
             "caption": "Disable animation on mobile",
@@ -61,24 +63,24 @@
             "doc": "Animations could be very slow on some older smartphones. To prevent this, set this option to false to disable animations on any mobile viewport.",
             "editor": "Checkbox",
             "name": "fx_mobile",
-            "rank": 5
+            "rank": 8
         },
         "AAj": {
-            "caption": "Change input automatically",
+            "caption": "Set initial date",
             "default_val": true,
             "doc": "This option changes the input value automatically, by default. Set to false to prevent it.",
             "editor": "Checkbox",
             "name": "init_set",
-            "rank": 6
+            "rank": 3
         },
         "AAk": {
-            "caption": "Language for month and day names",
+            "caption": "Language",
             "default_val": "English",
             "doc": "Display Language to use for Month name and Day-of-week.",
             "editor": "Dropdown",
             "name": "lang",
             "options": "Arabic,Italian,Hungarian,Greek,English,Espanol,Dansk,Deutch,Dutch,Francais,Polski,Portuguese,Slovenian,Ukrainian,Russian,Turkish,Korean",
-            "rank": 7
+            "rank": 9
         },
         "AAl": {
             "caption": "Show large mode on click of day.",
@@ -86,7 +88,7 @@
             "doc": "This option enables to switch the size of the picker by clicking on the icon at the bottom or clicking on the day block.",
             "editor": "Checkbox",
             "name": "large_mode",
-            "rank": 8
+            "rank": 10
         },
         "AAm": {
             "caption": "Show large view by default",
@@ -94,41 +96,35 @@
             "doc": "If is checked, this option shows the large view by default.",
             "editor": "Checkbox",
             "name": "large_default",
-            "rank": 9
+            "rank": 11
         },
         "AAn": {
-            "caption": "Prevent dates to/from current date",
+            "caption": "Lock",
             "default_val": "false",
             "doc": "This option sets the date limit based on the assigned variable. If you set to \"from\", you can't select a date earlier than the current date. Opposed to this behavior, if it's set to \"to\", you can not select a date after the current date.",
             "editor": "Dropdown",
             "name": "lock",
             "optional": false,
             "options": "false,to,from",
-            "rank": 10
+            "rank": 13
         },
         "AAo": {
             "caption": "Minimum year",
+            "default_val": "1970",
             "doc": "The lowest year that the control will allow.",
             "editor": "StaticText",
             "name": "min_year",
-            "optional": true,
-            "rank": 11
+            "optional": false,
+            "rank": 14
         },
         "AAp": {
             "caption": "Maximum year",
+            "default_val": "2050",
             "doc": "The highest year that the control will allow.",
             "editor": "StaticText",
             "name": "max_year",
-            "optional": true,
-            "rank": 12
-        },
-        "AAr": {
-            "caption": "Enable translate mode",
-            "default_val": true,
-            "doc": "If it's set to true, you can change the language by clicking on the icon at the bottom.",
-            "editor": "Checkbox",
-            "name": "translate_mode",
-            "rank": 14
+            "optional": false,
+            "rank": 15
         },
         "AAs": {
             "caption": "Modal",
@@ -136,7 +132,26 @@
             "doc": "If this option is set to true, the picker will be displayed centered, with a dark overlay in background.",
             "editor": "Checkbox",
             "name": "modal",
-            "rank": 13
+            "rank": 16
+        },
+        "ABB": {
+            "caption": "Use lock to allow selecting dates only to/from initial date. False will not lock any dates",
+            "editor": "Label",
+            "name": "lock_info",
+            "rank": 12
+        },
+        "ABC": {
+            "caption": "Placeholder",
+            "default_val": "Placeholder text ...",
+            "editor": "StaticText",
+            "name": "placeholder",
+            "rank": 1
+        },
+        "ABM": {
+            "caption": "If \"Set initial date is checked\" the datepicker will display the initial set date instead of the placeholder text. If not checked the initial date is null and the placeholder text will be displayed.",
+            "editor": "Label",
+            "name": "initial_info",
+            "rank": 2
         }
     },
     "icon": "ion-calendar",
@@ -156,5 +171,6 @@
             "name": "value",
             "value": "date"
         }
-    }
+    },
+    "support_autobinding": false
 }

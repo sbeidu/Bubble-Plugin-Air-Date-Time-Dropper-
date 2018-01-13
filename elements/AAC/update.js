@@ -1,24 +1,24 @@
 function(instance, properties, context) {
-  
   var div = instance.data.div;
   var id = instance.data.id;
+  var format = properties.format;
   
-  var disabled_dates; 
+  var disabled_dates = ""; 
   if(properties.disabled_dates !== null){
     instance.data.disabled_dates = properties.disabled_dates.get(0,500);
-    disabled_dates="";
-    console.log(instance.data.disabled_dates);
     for (i=0; i< instance.data.disabled_dates.length;i++){
       disabled_dates = disabled_dates+getFormattedDate1(instance.data.disabled_dates[i])+',';
     }
   }
+  console.log(disabled_dates);
   
   instance.data.default_date = properties.default_date;
-  var default_date = null;
+  var default_date = "";
   if(instance.data.default_date !== null){
     default_date = getFormattedDate2(instance.data.default_date);
     console.log(default_date);
   }
+  
   
   var formatLookup = {
     "22/06/1983" : "d/m/Y",
@@ -28,7 +28,8 @@ function(instance, properties, context) {
 	"22 June 1983" : "j F Y",
 	"22 Jun 1983" : "j M Y",
 	"22 Jun 1983" : "S F Y",
-	"Wed 22 June 1983" : "D j M Y",
+	"Wednesday 22 June 1983" : "l j M Y",
+    //"Wed 22 June 1983" : "D j M Y",
 	"Jun (month only)" : "m",
 	"1983 (year only)" : "Y",
   };
@@ -53,10 +54,18 @@ function(instance, properties, context) {
 	"Korean" : "ko"
   };  
   var did = '#'+id;
+  
+  
   $(did).attr('data-modal',properties.modal);
-  $(did).attr('data-default-date', default_date);
-  $(did).attr('data-disabled-days',disabled_dates);
-  $(did).attr('data-format',formatLookup[properties.format]);
+ // $(did).attr('data-d',default_date.getDay());
+  //$(did).attr('data-m',default_date.getMonth());
+  //$(did).attr('data-y',default_date.getFullYear());
+  if(default_date !== null){
+    $(did).attr('data-default-date', default_date);
+  };
+  disabled_dates = "12/01/2017,12/02/2017,12/02/2017";
+  $(did).attr('data-disabled-days',(disabled_dates === "")? false : disabled_dates);
+  $(did).attr('data-format',formatLookup[format]);
   $(did).attr('data-fx',properties.fx);
   $(did).attr('data-fx-mobile',properties.fx_mobile);
   $(did).attr('data-init-set',properties.init_set);
@@ -68,14 +77,21 @@ function(instance, properties, context) {
   $(did).attr('data-min-year',properties.min_year);
   $(did).attr('data-modal',properties.modal);
   $(did).attr('data-theme','air-drop-'+properties.theme);
-  $(did).attr('data-translate-mode',properties.translate_mode);
+  //$(did).attr('data-translate-mode',properties.translate_mode);
+  $(did).attr('placeholder',properties.placeholder);
 
   $(did).dateDropper();
+   console.log( $(did).dateDropper().picker);
   
+  instance.publishState('value', getDateFromFormat(properties.format, document.getElementById(id).value));
   
-  $('.pick-submit').on('touchstart mousedown', function() {
-    
-    instance.publishState('value', new Date(document.getElementById(id).value));
+  $(did).on("change", function() {
+   instance.publishState('value', getDateFromFormat(properties.format, document.getElementById(id).value));
+  });
+  
+  $('.pick-submit').on('touchstart mousedown', function() { 
+    console.log(document.getElementById(id).value);
+    instance.publishState('value', getDateFromFormat(properties.format, document.getElementById(id).value));
   });
   
   //mm/dd/yyyy
@@ -98,7 +114,51 @@ function(instance, properties, context) {
     day = day.length > 1 ? day : '0' + day;
     return month + '-' + day + '-' + year;
   }
-
+  
+  function getDateFromFormat(form, value){
+      var dateStr,day,month, year;
+      if(form === "22/06/1983") {
+          dateStr = value.split("/");
+          return new Date(dateStr[2],dateStr[1],dateStr[0],0,0,0,0);
+      }
+      else if(form === "06/22/1983") {
+          dateStr = value.split("/");
+          return new Date(dateStr[2],dateStr[0],dateStr[1],0,0,0,0);
+      }
+      else if(form === "22-06-1983") {
+          dateStr = value.split("-");
+          return new Date(dateStr[2],dateStr[1],dateStr[0],0,0,0,0);
+      }
+      else if(form === "06-22-1983") {
+          dateStr = value.split("-");
+          return new Date(dateStr[2],dateStr[0],dateStr[1],0,0,0,0);
+      }
+      else if(form === "22 June 1983") {
+          return new Date(value);
+      }
+      else if(form === "22 Jun 1983") {
+          return new Date(value);
+      }
+      else if(form === "Wednesday 22 June 1983") {
+          return new Date(value);
+      }
+      /*else if(form === "Wed 22 June 1983") {
+          return new Date(value);
+      }*/
+      else if(form === "Jun (month only)") {
+          var date = new Date();
+          date.setMonth(value-1)
+          return date;
+      }
+      else if(form === "1983 (year only)") {
+          var date = new Date();
+          date.setYear(value);
+          return date;
+      }
+      else{
+          return null;
+      }
+  }  
 /*
 M	Short month	Jan
 F	Long month	January
@@ -111,4 +171,5 @@ D	Short day-of-week	Sun
 l	Long day-of-week	Sunday
 S	Suffixed numeric day	13th
 */
+
 }

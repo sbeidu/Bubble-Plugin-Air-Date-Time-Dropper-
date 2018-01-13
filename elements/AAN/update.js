@@ -1,8 +1,9 @@
 function(instance, properties, context) {
   var div;
   div = instance.data.div;
-  var id = instance.data.id;  
-  $("#"+id ).timeDropper({
+  var id = instance.data.id; 
+  //document.getElementById(id).placeholder = properties.placeholder; 
+  $("#"+id).timeDropper({
     format: getTimeFormat(),
     autoswitch: properties.autoswitch,
     meridians: properties.meridians,
@@ -12,7 +13,8 @@ function(instance, properties, context) {
     primaryColor: properties.primarycolor,
     borderColor: properties.bordercolor,
     backgroundColor: properties.backgroundcolor,
-    textColor:properties.textcolor
+    textColor:properties.textcolor,
+    step: (properties.minute_step>0 && properties.minute_step<60)? properties.minute_step : 1
   });
   
   function getTimeFormat(){
@@ -24,6 +26,11 @@ function(instance, properties, context) {
     else if (val == '3:9 PM') return "h:m A";
     else if (val == '03:09 AM') return "hh:mm A";
   }
+  
+  	var value = document.getElementById(id).value;
+    instance.publishState('value', value);
+    instance.publishState('hours', parseTime(value)[0]);
+    instance.publishState('minutes', parseTime(value)[1]);
   
   $('.td-overlay').on('touchend mouseup', function() {
     var value = document.getElementById(id).value;

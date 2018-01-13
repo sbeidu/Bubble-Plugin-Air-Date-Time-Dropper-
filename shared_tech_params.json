@@ -20,25 +20,25 @@
             "name": "datedropper.css",
             "url": "//dd7tel2830j4w.cloudfront.net/f1497904845602x774688579142093700/datedropper.css"
         },
-        "AAM": {
-            "name": "theme.css",
-            "url": "//dd7tel2830j4w.cloudfront.net/f1497912148369x682439032243564700/theme.css"
-        },
         "AAO": {
             "name": "timedropper.min.css",
             "url": "//dd7tel2830j4w.cloudfront.net/f1497919056159x983207752229645800/timedropper.min.css"
         },
-        "AAP": {
-            "name": "timedropper.min.js",
-            "url": "//dd7tel2830j4w.cloudfront.net/f1497919138906x698265989311039500/timedropper.min.js"
+        "ABD": {
+            "name": "datetheme.css",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1515652112528x433735188795253600/theme.css"
         },
-        "AAt": {
-            "name": "themes",
-            "url": "//dd7tel2830j4w.cloudfront.net/f1498006235325x718382122693583400/theme.css"
-        },
-        "AAy": {
+        "ABP": {
             "name": "datedropper.min.js",
-            "url": "//dd7tel2830j4w.cloudfront.net/f1512496500813x645340363029390600/datedropper.min.js"
+            "url": "//dd7tel2830j4w.cloudfront.net/f1515868480878x120520852040499460/datedropper.min.js"
+        },
+        "ABQ": {
+            "name": "datedropper.js",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1515868951720x293102386407554200/datedropper.js"
+        },
+        "ABR": {
+            "name": "timedropper.min.js",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1515873623643x480102521367371100/timedropper.min.js"
         }
     },
     "dependencies": {

@@ -24,7 +24,7 @@
             "doc": "Will automatically switch between hour and minute handles",
             "editor": "Checkbox",
             "name": "autoswitch",
-            "rank": 1
+            "rank": 2
         },
         "AAS": {
             "caption": "Use 24hr clock",
@@ -32,7 +32,7 @@
             "doc": "If checked will use 24hr clock",
             "editor": "Checkbox",
             "name": "meridians",
-            "rank": 2
+            "rank": 3
         },
         "AAT": {
             "caption": "Enables time change using mousewheel",
@@ -40,7 +40,7 @@
             "doc": "Enables time change using mousewheel",
             "editor": "Checkbox",
             "name": "mousewheel",
-            "rank": 3
+            "rank": 4
         },
         "AAU": {
             "caption": "Set current time",
@@ -48,7 +48,7 @@
             "doc": "Automatically set current time by default.",
             "editor": "Checkbox",
             "name": "setcurrenttime",
-            "rank": 4
+            "rank": 5
         },
         "AAV": {
             "caption": "Initial animation",
@@ -57,7 +57,7 @@
             "editor": "Dropdown",
             "name": "init_animation",
             "options": "fadein,fadeout,dropdown",
-            "rank": 5
+            "rank": 6
         },
         "AAW": {
             "caption": "Accent color",
@@ -66,7 +66,7 @@
             "editor": "Color",
             "name": "primarycolor",
             "optional": true,
-            "rank": 6
+            "rank": 7
         },
         "AAX": {
             "caption": "Border color",
@@ -75,7 +75,7 @@
             "editor": "Color",
             "name": "bordercolor",
             "optional": true,
-            "rank": 7
+            "rank": 8
         },
         "AAY": {
             "caption": "Background color",
@@ -84,7 +84,7 @@
             "editor": "Color",
             "name": "backgroundcolor",
             "optional": true,
-            "rank": 8
+            "rank": 9
         },
         "AAZ": {
             "caption": "Text color",
@@ -93,7 +93,17 @@
             "editor": "Color",
             "name": "textcolor",
             "optional": true,
-            "rank": 9
+            "rank": 10
+        },
+        "ABS": {
+            "caption": "Minute step",
+            "default_val": 1,
+            "doc": "Minute step. Should be between 1 and 59",
+            "editor": "DynamicValue",
+            "name": "minute_step",
+            "optional": true,
+            "rank": 1,
+            "value": "number"
         }
     },
     "icon": "ion-waterdrop",
